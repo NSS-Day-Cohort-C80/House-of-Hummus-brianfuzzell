@@ -13,7 +13,7 @@ export const entreesOptions = async () => {
 
     let optionsHTML = ""
 
-    const divStringArray = entrees.map(
+    const arrayOfOptions = entrees.map(
         (entree) => {
             return `<div>
                 <input type="radio" name="entree" value="${entree.id}" /> ${entree.name}
@@ -21,9 +21,9 @@ export const entreesOptions = async () => {
         }
     )
 
-    // console.log(divStringArray)
+    // console.log(arrayOfOptions)
 
-    optionsHTML += divStringArray.join("")
+    optionsHTML += arrayOfOptions.join("")
 
     // console.log(optionsHTML)
 
