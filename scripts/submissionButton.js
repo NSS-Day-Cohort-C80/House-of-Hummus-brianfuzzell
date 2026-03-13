@@ -1,4 +1,4 @@
-// import { placeOrder } from "./transientState.js"
+import { placeOrder } from "./transientState.js"
 
 // click event handler
 const handlePurchaseSubmission = (clickEvent) => {

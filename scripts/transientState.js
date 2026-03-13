@@ -20,4 +20,17 @@ export const setSideChoice = (chosenSide) => {
     // console.log(`Selected entree ID is ${transientState.sideId}`)
 }
 
-// TODO: create and export a placeOrder func
+// TODO: create and export a placeOrder func to send orders data to API
+export const placeOrder = async () => {
+    // Add keys needed for POST
+    const postOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(transientState)
+    }
+
+    // Send transient state data to API
+    const response = await fetch("http://localhost:8088/purchases", postOptions)
+}
