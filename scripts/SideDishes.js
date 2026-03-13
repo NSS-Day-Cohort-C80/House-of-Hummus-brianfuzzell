@@ -2,7 +2,7 @@
 
 // Create change handler func
 
-export const Sides = async () => {
+export const sidesOptions = async () => {
     // Fetch sides from API
     const response = await fetch("http://localhost:8088/sides")
     const sides = await response.json()
