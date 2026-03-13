@@ -3,6 +3,7 @@ import { setVegetableChoice } from "./transientState.js"
 // Create change handler func
 const handleVegetableSelection = (changeEvent) => {
     if (changeEvent.target.name === "vegetable") {
+        setVegetableChoice(parseInt(changeEvent.target.value))
     }
 }
 
