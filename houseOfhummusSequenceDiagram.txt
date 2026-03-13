@@ -1,0 +1,44 @@
+title House of Hummus sequence diagram
+
+participant Browser
+
+participant DOM
+DOM-->>Browser: Render updated HTML
+
+participant Main
+Main->>Vegetables: Generate vegetable options
+Vegetables-->>Main: Here are some radio buttons
+
+Main->>Sides: Generate sides options
+Sides-->>Main: Here are some radio buttons
+
+Main->>Entrees: Generate entrees options
+Entrees-->>Main: Here are some radio buttons
+
+Main->>TransientState: Here is what the customer selected
+
+Main-->>DOM: Update InnerHTML
+
+participant Vegetables
+
+
+participant Sides
+
+participant Entrees
+
+participant Purchases
+Purchases->>TransientState: Can I have the purchases?
+TransientState-->>Purchases: Here are the purchases
+Purchases-->>Main: Generate the HTML of purchases
+
+participant TransientState
+
+TransientState->>API: Save this dinner order
+API-->>TransientState: Order saved
+
+participant API
+API->>Database: Save this order
+
+
+participant Database
+Database-->>API: Here are the saved orders
