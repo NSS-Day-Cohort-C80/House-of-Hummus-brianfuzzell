@@ -1,10 +1,12 @@
-import { FoodTruck } from "./FoodTruck.js"
+// import { FoodTruck } from "./FoodTruck.js"
+import { entreesOptions } from "./Entrees.js"
 
 const mainContainer = document.querySelector("#container")
 
 const renderAllHTML = async () => {
     // Assign imported functions to HTML variables
     // const foodTruckHTML = FoodTruck()
+    const entreesHTML = entreesOptions()
 
     // Create composedHTML
     const composedHTML = `
@@ -13,7 +15,7 @@ const renderAllHTML = async () => {
         <article>
             <section>
                 <h2>Base Dish</h2>
-
+                ${entreesHTML}
             </section>
 
             <section>
@@ -36,7 +38,7 @@ const renderAllHTML = async () => {
         </article>
     `
     
-    mainContainer.innerHTML = FoodTruck()
+    mainContainer.innerHTML = composedHTML
 }
 
 // Add an event listener for our new custom event
