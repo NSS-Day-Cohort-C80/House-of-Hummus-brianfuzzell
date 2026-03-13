@@ -1,6 +1,10 @@
-// Import {} from transientState.js
+import { setVegetableChoice } from "./transientState.js"
 
 // Create change handler func
+const handleVegetableSelection = (changeEvent) => {
+    if (changeEvent.target.name === "vegetable") {
+    }
+}
 
 export const veggiesOptions = async () => {
     // Fetch entrees from API
@@ -10,11 +14,12 @@ export const veggiesOptions = async () => {
     // console.log(vegetables)
 
     // Add an event listener
+    document.addEventListener("change", handleVegetableSelection)
 
     let optionsHTML = ""
 
     const arrayOfOptions = vegetables.map(
-        (veg) => {
+        (vegetable) => {
             return `<div>
                 <input type="radio" name="vegetable" value="${vegetable.id}" /> ${vegetable.type}
             </div>`

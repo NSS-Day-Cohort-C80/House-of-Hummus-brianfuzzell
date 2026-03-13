@@ -1,6 +1,11 @@
-// Import {} from transientState.js
+import { setEntreeChoice } from "./transientState.js"
 
 // Create change handler func
+const handleEntreeSelection = (changeEvent) => {
+    if (changeEvent.target.name === "entree") {
+        setEntreeChoice(parseInt(changeEvent.target.value))
+    }
+}
 
 export const entreesOptions = async () => {
     // Fetch entrees from API
@@ -10,6 +15,7 @@ export const entreesOptions = async () => {
     // console.log(entrees)
 
     // Add an event listener
+    document.addEventListener("change", handleEntreeSelection)
 
     let optionsHTML = ""
 

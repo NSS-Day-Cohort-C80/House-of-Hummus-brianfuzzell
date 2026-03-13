@@ -1,6 +1,11 @@
-// Import {} from transientState.js
+import { setSideChoice } from "./transientState.js"
 
 // Create change handler func
+const handleSideSelection = (changeEvent) => {
+    if (changeEvent.target.name === "side") {
+       setSideChoice(parseInt(changeEvent.target.value)) 
+    }
+}
 
 export const sidesOptions = async () => {
     // Fetch sides from API
@@ -10,6 +15,7 @@ export const sidesOptions = async () => {
     // console.log(sides)
 
     // Add an event listener
+    document.addEventListener("change", handleSideSelection)
 
     let optionsHTML = ""
 
