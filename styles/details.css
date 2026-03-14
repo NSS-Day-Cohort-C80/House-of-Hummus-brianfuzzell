@@ -5,6 +5,7 @@
 
 .options {
     flex-basis: 24%;
+    flex: 1;
     margin: 0 2rem;
     border: 1px dashed dodgerblue;
     padding: 1rem;
@@ -12,8 +13,25 @@
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
 
-.customOrders {
-    padding: 1rem 2rem;
+.customerOrders {
+    padding: 2rem;
     font-size: 1.1rem;
 }
 
+@media screen and (max-width: 640px) {
+    .choices {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem 0;
+    }
+
+    .options {
+        width: 60vw;
+    }
+
+    .customerOrders {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

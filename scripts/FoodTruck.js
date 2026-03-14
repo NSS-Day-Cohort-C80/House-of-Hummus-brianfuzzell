@@ -17,24 +17,24 @@ export const FoodTruck = async () => {
             <h1 class="title">Laura Kathryn's House of Hummus</h1>
         </header>
 
-        <article>
-            <section>
+        <article class="choices">
+            <section class="options">
                 <h2>Base Dish</h2>
                 ${entreesHTML}
             </section>
 
-            <section>
+            <section class="options">
                 <h2>Vegetable</h2>
                 ${vegetablesHTML}
             </section>
 
-            <section>
+            <section class="options">
                 <h2>Sides</h2>
                 ${sidesHTML}
             </section>
         </article>
         
-        <article>
+        <article class="button">
             ${buttonHTML}
         </article>
 
