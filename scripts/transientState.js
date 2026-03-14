@@ -33,4 +33,8 @@ export const placeOrder = async () => {
 
     // Send transient state data to API
     const response = await fetch("http://localhost:8088/purchases", postOptions)
+
+    // Dispatch a custom event when the submission is complete 
+    const stateChanged = new CustomEvent("newPurchaseSubmitted")
+    document.dispatchEvent(stateChanged)
 }

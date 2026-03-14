@@ -10,5 +10,11 @@ const renderAllHTML = async () => {
 }
 
 // Add an event listener for our new custom event
+document.addEventListener("newPurchaseSubmitted", CustomEvent => {
+
+    console.log("Data state changed. Regenerating HTML now")
+
+    renderAllHTML()
+})
 
 renderAllHTML()
