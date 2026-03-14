@@ -2,7 +2,10 @@ export const Sales = async () => {
     const response = await fetch("http://localhost:8088/purchases?_expand=entree&_expand=vegetable&_expand=side")
     const purchases = await response.json()
 
-    let html = `<div id="purchase">`
+    let html = `
+        <div id="purchase-submission-list">
+            <h2>Monthly Sales</h2>
+    `
 
     const purchasesHTML = purchases.map(
         (purchase) => {
