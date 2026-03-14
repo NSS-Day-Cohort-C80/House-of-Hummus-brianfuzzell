@@ -20,7 +20,7 @@ export const setSideChoice = (chosenSide) => {
     // console.log(`Selected entree ID is ${transientState.sideId}`)
 }
 
-// TODO: create and export a placeOrder func to send orders data to API
+// Create and export a placeOrder func to send orders data to API
 export const placeOrder = async () => {
     // Add keys needed for POST
     const postOptions = {

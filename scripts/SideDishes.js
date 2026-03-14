@@ -33,6 +33,6 @@ export const sidesOptions = async () => {
 
     // console.log(optionsHTML)
 
-    return html
+    return optionsHTML
 }
 

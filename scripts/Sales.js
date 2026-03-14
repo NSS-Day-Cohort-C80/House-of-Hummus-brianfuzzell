@@ -20,7 +20,7 @@ export const Sales = async () => {
         }
     )
 
-    html += salesHTML.join("")
+    html += purchasesHTML.join("")
 
     html += `</div>`
 

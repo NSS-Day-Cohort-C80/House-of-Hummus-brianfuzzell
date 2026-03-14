@@ -3,14 +3,11 @@ import { entreesOptions } from "./Entrees.js"
 import { veggiesOptions } from "./Vegetables.js"
 import { sidesOptions } from "./SideDishes.js"
 
-const entreesHTML = entreesOptions()
-const vegetablesHTML = veggiesOptions()
-const sidesHTML = sidesOptions()
-
-// Will need an async func in this module because the funcs Food Truck imports are async
-
-export const FoodTruck = () => {
-    const salesHTML = Sales() // Investigate this
+export const FoodTruck = async () => {
+    const salesHTML = await Sales()
+    const entreesHTML = await entreesOptions()
+    const vegetablesHTML = await veggiesOptions()
+    const sidesHTML = await sidesOptions()
 
     return `
         <header class="header">
