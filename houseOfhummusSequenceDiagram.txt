@@ -6,18 +6,21 @@ participant DOM
 DOM-->>Browser: Render updated HTML
 
 participant Main
-Main->>Vegetables: Generate vegetable options
-Vegetables-->>Main: Here are some radio buttons
+Main->Food Truck: Can I have the HTML?
+Food Truck-->Main: Here's the HTML
+Main-->DOM:State changed!
 
-Main->>Sides: Generate sides options
-Sides-->>Main: Here are some radio buttons
+participant Food Truck
+Food Truck->>Vegetables: Generate vegetable options
+Vegetables-->>Food Truck: Here are some radio buttons
 
-Main->>Entrees: Generate entrees options
-Entrees-->>Main: Here are some radio buttons
+Food Truck->>Sides: Generate sides options
+Sides-->>Food Truck: Here are some radio buttons
 
-Main->>TransientState: Here is what the customer selected
+Food Truck->>Entrees: Generate entrees options
+Entrees-->>Food Truck: Here are some radio buttons
 
-Main-->>DOM: Update InnerHTML
+Food Truck->>TransientState: Here is what the customer selected
 
 participant Vegetables
 
